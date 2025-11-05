@@ -1,20 +1,41 @@
 # ZEND
 
-**Zend** es una aplicación de microblogging que permite a los usuarios publicar contenido y ver publicaciones en un timeline en tiempo real. Los posts pueden incluir texto, imágenes, emojis y encuestas. Además, los usuarios pueden interactuar mediante acciones como "likes", comentarios, re-posts, guardados y compartidos. También es posible ver a los usuarios con más seguidores.
+**Zend** es una aplicación de microblogging moderna que permite a los usuarios compartir y descubrir contenido en tiempo real. Los usuarios pueden publicar texto, imágenes, emojis y encuestas, así como interactuar mediante "likes", comentarios, re-posts, guardados y compartidos. Además cuenta con un sistema de seguimiento de usuarios y un timeline en vivo.
+
+![foto home](https://res.cloudinary.com/dcauxh61z/image/upload/v1762383348/home.png)
+![foto perfil](https://res.cloudinary.com/dcauxh61z/image/upload/v1762383349/perfil.png)
+![foto explorar](https://res.cloudinary.com/dcauxh61z/image/upload/v1762383348/explorar.png)
+![foto mensaje](https://res.cloudinary.com/dcauxh61z/image/upload/v1762383347/mensaje.png)
+
+# Tabla de Contenidos
+
+[✨ Características](#-características)
+
+[🛠️ Tecnologías](#️-tecnologías)
+
+[⚙️ Instalación](#️-instalación-local)
+
+[⚙️ Variables de Entorno](#variables-de-entorno)
+
+[📁 Estructura del Proyecto](#estructura-del-proyecto)
+
+[🚀 Despliegue](#-despliegue)
+
+[🧩 Futuras Mejoras](#-futuras-mejoras)
 
 ---
 
 ## ✨ Características
 
-- Registro e inicio de sesión de usuarios
-- CRUD completo de publicaciones
-- Feed público con los posts más recientes
-- Interfaz moderna y responsiva
-- API RESTful para gestión de datos
-- Perfil de usuario con avatar y portada
-- Soporte para likes, comentarios, reposts, encuestas, etc.
-- Funcionalidades en tiempo real (mediante socket.io)
-- Seguimiento de usuarios
+- 🔐 Autenticación completa: Registro e inicio de sesión con JWT.
+- 📝 CRUD de publicaciones: Crear, editar, eliminar y listar posts.
+- 💬 Interacciones sociales: Likes, comentarios, re-posts, guardados y compartidos.
+- 🧵 Feed en tiempo real: Actualización dinámica mediante Socket.IO.
+- 👤 Perfiles personalizados: Avatar, portada y biografía de usuario.
+- 👥 Sistema de seguidores: Ver y seguir a otros usuarios.
+- 🌐 API RESTful: Separación clara entre frontend y backend.
+- 📱 Interfaz moderna: Construida con React, TypeScript y TailwindCSS.
+- 💾 Base de datos relacional: Gestión eficiente de datos con MySQL y Sequelize.
 
 ---
 
@@ -22,27 +43,36 @@
 
 ### Frontend
 
-- React con TypeScript
-- React Router
-- Tailwind CSS
+⚛️ React + TypeScript
+
+🧭 React Router
+
+🎨 Tailwind CSS
 
 ### Backend
 
-- Node.js con TypeScript
-- Express
-- MySQL con Sequelize
-- JSON Web Tokens (JWT)
+🟢 Node.js + TypeScript
+
+🚀 Express
+
+🗄️ MySQL + Sequelize ORM
+
+🔐 JSON Web Tokens (JWT)
+
+⚡ Socket.IO (tiempo real)
 
 ---
 
-## Web Desplegada
+## 🚀 Despliegue
 
-## ⚙️ Instalación
+https://zendv2.vercel.app
+
+## ⚙️ Instalación (Local)
 
 Clona el repositorio y configura el entorno:
 
 ```bash
-git clone https://github.com/xthebobyx/zend.git
+git clone https://github.com/XtheBobyX/ZEND
 cd zend
 
 ```
@@ -84,35 +114,47 @@ DB_HOST=localhost
 SECRET_KEY=your_secret_key
 PORT=3000
 DB_PORT=3306
+CLOUDINARY_NAME="<cloud_name>"
+CLOUDINARY_APIKEY="<api_key>"
+CLOUDINARY_APISECRET="<api_secret>"
 
 ```
 
 ## Estructura del Proyecto
 
-/frontend
-/src
-/assets
-/components
-/hooks
-/pages
-App.tsx
-main.tsx
-index.html
+```text
+zend/
+├── frontend/
+│ ├── src/
+│ │ ├── assets/
+│ │ ├── components/
+│ │ ├── hooks/
+│ │ ├── pages/
+│ │ ├── App.tsx
+│ └── index.html
+│
+└── backend/
+├── src/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ └── server.ts
+```
 
-/backend
-/src
-/controllers
-/models
-/routes
+# 🧩 Futuras Mejoras
 
-📌 Estado del Proyecto
+Aquí algunas ideas de evolución del proyecto:
 
-🧪 Que funcionalidades podria añadir:
+🔔 Notificaciones en tiempo real
 
-Notificaciones en tiempo real
+🧑‍💼 Panel de administración
 
-Panel de administración
+🎥 Soporte para video/audio
 
-Soporte para contenido multimedia (video/audio)
+🔄 Scroll infinito y paginación
 
-Paginación y Scroll Infinito
+🌙 Modo oscuro personalizable
+
+# 📄 Licencia
+
+Este proyecto está bajo la licencia MIT.
