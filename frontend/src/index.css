@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-laptop: 1279px;
+    --breakpoint-pc: 1580px;
+
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    @apply bg-black text-white;
+}
+
+.font-zen {
+    font-family: "Zen Antique", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.debug {
+    border: 3px solid red;
+}
+
+.debug2 {
+    border: 3px solid rgb(14, 12, 172);
+}
