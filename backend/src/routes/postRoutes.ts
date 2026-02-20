@@ -13,7 +13,7 @@ router.delete("/id/:id", postController.deletePostById);
 router.get("/user/:id", postController.getPostsByUser);
 
 // Buscador
-router.get("/buscar", postController.searchPosts);
+router.get("/search", postController.searchPosts);
 
 // Likes
 router.get("/:id/like", postController.hasLike);
