@@ -24,8 +24,8 @@ function Search() {
     email: "",
     full_name: "",
     avatar: "",
-    portada: "",
-    biografia: "",
+    cover: "",
+    biography: "",
     createdAt: "",
     updatedAt: "",
   });
@@ -141,7 +141,7 @@ function Search() {
           {Array.isArray(results) &&
             results.length >= 1 &&
             selectedOption === "posts" &&
-            results.map((post: any) => <Post post={post} key={post.id_post} />)}
+            results.map((post: any) => <Post post={post} key={post.post_id} />)}
         </div>
 
         <Menu_mobile />

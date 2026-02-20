@@ -32,8 +32,12 @@ function Update_Profile() {
       const res = await fetch(`${API_URL}/api/users/username/${username}`);
       const json = await res.json();
 
-      if (json.avatar) setProfile((prev) => ({ ...prev, avatar: json.avatar }));
-      if (json.cover) setProfile((prev) => ({ ...prev, cover: json.cover }));
+      setProfile((prev) => ({
+        ...prev,
+        ...(json.avatar && { avatar: json.avatar }),
+        ...(json.cover && { cover: json.cover }),
+        ...(json.biography && { biography: json.biography }),
+      }));
     };
 
     getAvatarAndCover();
@@ -176,7 +180,7 @@ function Update_Profile() {
                 <textarea
                   name="biography"
                   id="biography"
-                  className="border border-white rounded-2xl w-full h-40  mt-8 pt-4 pl-4 text-xl md:h-60"
+                  className="border border-white rounded-2xl w-full h-40 mt-8 pt-4 pl-4 text-xl md:h-60"
                   onChange={handleInputs}
                 />
               </div>
