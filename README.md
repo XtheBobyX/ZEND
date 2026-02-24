@@ -61,7 +61,7 @@
 ---
 
 ## 🚀 Despliegue
-
+Este proyecto se encuentra desplegado en [zendv2.vercel.app](https://zendv2.vercel.app)
 ## ⚙️ Instalación (Local)
 
 Clona el repositorio y configura el entorno:
